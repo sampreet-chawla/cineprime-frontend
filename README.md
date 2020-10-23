@@ -92,11 +92,11 @@ The React Architecture Diagram was built by Sampreet and formatted by Sampreet a
 
 
 
-#### Time-Priority Matrix, MVPs and Post MVPs
+## Time-Priority Matrix, MVPs and Post MVPs
 
-##### Time-Priority Matrix
+#### Time-Priority Matrix
 
-### Time/Priority Matrix - 
+
 
 Created using [https://stackedit.io/](https://stackedit.io/)
 
