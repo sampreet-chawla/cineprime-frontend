@@ -12,7 +12,7 @@ These wireframes are built using [Google Draw](https://docs.google.com/drawings/
 
 - Mobile View - [Mobile-01](./img/wireframes/mobile/01.cineprime-mobile.png) and [Mobile-02](./img/wireframes/mobile/02.cineprime-mobile.png)
 - Tablet View - []()
-- Desktop View - [Browse](./img/wireframes/mobile/01.browse-desktop.png), [Movir Details](./img/wireframes/mobile/02.details-desktop.png), [Sign Up / Sign In](./img/wireframes/mobile/03.signin-desktop.png), [Watchlist](./img/wireframes/mobile/04.watchlist-desktop.png) and [Team](./img/wireframes/mobile/05.team-desktop.png)
+- Desktop View - [Browse](./img/wireframes/desktop/01.browse-desktop.png), [Movie Details](./img/wireframes/desktop/02.details-desktop.png), [Sign Up / Sign In](./img/wireframes/desktop/03.signin-desktop.png), [Watchlist](./img/wireframes/desktop/04.watchlist-desktop.png) and [Team](./img/wireframes/desktop/05.team-desktop.png)
 
 
 #### React Architecture Diagram
