@@ -121,7 +121,6 @@ Created using [https://stackedit.io/](https://stackedit.io/)
 | Carousel| M | 3hrs | hrs | hrs |
 | Signup/Sign in | H | 4hrs | hrs | hrs |
 | Responsiveness | H | 6hrs | hrs | hrs |
-| Dark mode/light mode | L | 3hrs| hrs | hrs |
 | Extra Styling | L | hrs | hrs | hrs |
 | Total | H | hrs| hrs | hrs |
 
