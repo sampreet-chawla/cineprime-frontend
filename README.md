@@ -143,7 +143,32 @@ Created using [https://stackedit.io/](https://stackedit.io/)
 - Watchlist updates
 - Team page
 
-##### Post MVPs
+#### MVPs
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Repos setup | H | 8hrs | hrs | hrs |
+| Server and Connections | H | 1hrs | hrs | hrs |
+| Schemas | H | 1hr | hrs | hrs |
+| Controllers | H | 4hr | hrs | hrs |
+| Backend deployment | H | 1hrs | hrs | hrs |
+| React components setup | H | 1hrs | hrs | hrs |
+| Navbar| H | 2hrs | hrs | hrs |
+| Footer| L | 1hrs | hrs | hrs |
+| Banner| M | 1hrs | hrs | hrs |
+| Team page| M | 3hrs | hrs | hrs |
+| Switch, Routes and Links | H | 3hrs | hrs | hrs |
+| Watchlist config| H | 4hrs | hrs | hrs |
+| Watchlist filter| H | 4hrs | hrs | hrs |
+| Watchlist updates| H | 4hrs | hrs | hrs |
+| Movie Details| H | 3hrs | hrs | hrs |
+| Carousel| M | 3hrs | hrs | hrs |
+| Signup/Sign in | H | 4hrs | hrs | hrs |
+| Responsiveness | H | 6hrs | hrs | hrs |
+| Dark mode/light mode | L | 3hrs| hrs | hrs |
+| Extra Styling | L | hrs | hrs | hrs |
+| Total | H | hrs| hrs | hrs |
+
+#### Post MVPs
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
