@@ -6,6 +6,28 @@ Squad-Lead: Alex Merced
 
 Team Members: Bojan Josilo, Gourav Auluck, Sampreet Chawla, and Shayan Gagan. Sampreet Chawla is the Tech Lead and Git Master.
 
+#### Project Description
+
+Tha cineprime project is a "Movie Planner" web application which supports visitors to - 
+
+- Browse - through the movies from different genres using the TMDB API. A random movie will be displayed in the banner, and row-wise carousel display of movies for each genre.
+- View Details - view the movie details for a selected movie
+- Team - Get to the team which built the project. 
+- Option to sign up and login and logout.
+- Wishlist - Signed in users can add selected movies to a wishlist, where they can 
+* View the complete list of movies in their wishlist
+* View the list of watched movies and delete any movie from the list
+* View the list of 'want to watch' movies, plan their watch date, update their actual watch date, priortize their watch list, and dete movieies from watchlist.  
+
+
+#### Project Inspirations
+
+We got inspired from the following sites and projects - 
+
+* [Movie Flex App](https://movieflex-28ba7.web.app/) - for baneer and carousel 
+* [Good Reads Website](https://www.goodreads.com/) - For Wishlist CRUD Functionality
+
+
 #### Wireframes 
 
 These wireframes are built using [Google Draw](https://docs.google.com/drawings/)
