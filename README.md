@@ -98,31 +98,32 @@ The React Architecture Diagram was built by Sampreet and formatted by Sampreet a
 
 
 
-Created using [https://stackedit.io/](https://stackedit.io/)
+#### MVPs 
 
-#### MVPs
+A team collaborative effort on time estimation, created using [https://stackedit.io/](https://stackedit.io/)
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Repos setup & Documentation | H | 5hrs | hrs | hrs |
+| Repos setup with initial Boilerplate code | H | 2hrs | hrs | hrs |
+| Preparation and Planning | H | 8hrs | 8hrs | 8hrs |
+| Documentation | H | 12hrs | 16hrs | 12hrs |
 | Server and Connections | H | 2hrs | hrs | hrs |
 | Schemas | H | 1hr | hrs | hrs |
 | Controllers | H | 4hr | hrs | hrs |
 | Backend deployment | H | 1hrs | hrs | hrs |
 | React components setup | H | 1hrs | hrs | hrs |
-| Navbar| H | 2hrs | hrs | hrs |
-| Footer| L | 1hrs | hrs | hrs |
+| Navbar and Footer | H | 2hrs | hrs | hrs |
 | Banner| M | 1hrs | hrs | hrs |
+| Movie Carosel - Each Genre| M | 6hrs | hrs | hrs |
 | Team page| M | 3hrs | hrs | hrs |
 | Switch, Routes and Links | H | 3hrs | hrs | hrs |
-| Watchlist config| H | 4hrs | hrs | hrs |
+| Watchlist config (addition)| H | 4hrs | hrs | hrs |
 | Watchlist filter| H | 4hrs | hrs | hrs |
-| Watchlist updates| H | 4hrs | hrs | hrs |
+| Watchlist updates| H | 12hrs | hrs | hrs |
 | Movie Details| H | 3hrs | hrs | hrs |
-| Carousel| M | 3hrs | hrs | hrs |
-| Signup/Sign in | H | 4hrs | hrs | hrs |
-| Responsiveness | H | 6hrs | hrs | hrs |
-| Extra Styling | L | hrs | hrs | hrs |
-| Total | H | hrs| hrs | hrs |
+| Signup/Sign in | H | 12hrs | hrs | hrs |
+| Responsiveness | H | 12hrs | hrs | hrs |
+| Extra Styling | L | 3hrs | hrs | hrs |
+| **Total** | H | **96hrs**| hrs | hrs |
 
 #### Post MVPs
 
@@ -133,6 +134,7 @@ Created using [https://stackedit.io/](https://stackedit.io/)
 | Add your rating to the movie | M |  8hrs | hrs | hrs |  
 | Dark and Light Themes | M |  8hrs | hrs | hrs |  
 | Clear the complete Watchlist | H |  3hrs | hrs | hrs |  
+| **Total** | H | **32hrs**| hrs | hrs |
 
 
 
