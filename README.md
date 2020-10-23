@@ -6,6 +6,19 @@ Squad-Lead: Alex Merced
 
 Team Members: Bojan Josilo, Gourav Auluck, Sampreet Chawla, and Shayan Gagan. Sampreet Chawla is the Tech Lead and Git Master.
 
+#### Wireframes 
+
+These wireframes are built using [Google Draw](https://docs.google.com/drawings/)
+
+- [Mobile View]()
+- [Tablet View]()
+- [Desktop View]()
+
+
+#### React Architecture Diagram
+
+[cineprime - React Architecture Diagram](./img/cineprime-react-architecture.png)
+
 #### Routing Table
 
 | Route                  |                                   Purpose                                    |
@@ -22,6 +35,38 @@ Team Members: Bojan Josilo, Gourav Auluck, Sampreet Chawla, and Shayan Gagan. Sa
 | /watchlist/editOrder   | Order/Chnage Priority of the movies in the watchlist for not yet watched movies  |
 | /watchlist/delete      |                        Delete movies from watchlist                          |
 | /team                  |                       Project team information                               |
+
+
+#### Components
+
+
+
+#### Time-Priority Matrix, MVPs and Post MVPs
+
+##### Time-Priority Matrix
+
+##### MVPs
+
+- Backend and Frontend repos
+- Signup/SignIn/Logout
+- Banner - Simple Image / Video
+- Row-wise Carousel Implementation image with title tooltip
+- NavBar and Footer
+- Movie Detail
+- WatchList Display
+- Watchlist filter
+- Watchlist updates
+- Team page
+
+##### Post MVPs
+
+- Sorting the watchlist by different fields
+- D3 Banner
+- Add your rating to the movie
+- Dark and Light Themes
+
+
+
 
 
 
