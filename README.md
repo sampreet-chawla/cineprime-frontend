@@ -30,6 +30,8 @@ We got inspired from the following sites and projects -
 
 
 
+### User Story:
+
 **User Story**: *As a user, I would love to take a look at movies library, browse the movies and if I find what I like, I can easily 		add it to my watchlist track what I've seen.*
 **Frontend**:  *Welcomes the user with the animated banner, displayed row of the movies and offers account creation to keep track of his profile.*
 **Backend**: *Stores the user's created profile & keeps track of his progress.*
@@ -49,6 +51,7 @@ We got inspired from the following sites and projects -
 **User Story**: *I want to start from the beginning. I am no longer interested in sci-fi* 
 **Frontend**: *Clear button!?*  
 **Backend**:  *Provides the fresh watchlist, from scratch.* 
+
 
 
 #### Wireframes 
