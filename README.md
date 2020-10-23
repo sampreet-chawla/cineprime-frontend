@@ -28,6 +28,28 @@ We got inspired from the following sites and projects -
 * [Good Reads Website](https://www.goodreads.com/) - For Wishlist CRUD Functionality
 * [Sampreet's bibiophile website](https://bibliophile.netlify.app/) - For initial wishlist inspiration
 
+### User Story:
+
+**User Story**: *As a user, I would love to take a look at movies library, browse the movies and if I find what I like, I can easily 		add it to my watchlist track what I've seen.*
+**Frontend**:  *Welcomes the user with the animated banner, displayed row of the movies and offers account creation to keep track of his profile.*
+**Backend**: *Stores the user's created profile & keeps track of his progress.*
+
+**User Story**: It actually sounds good. As a user I want to register for your service.
+ **Frontend**: Offers the sign-up form, starts the account creation.
+**Backend**:  Processes user's data and saves it for further authentication. 
+
+**User Story**: I want to browse and create my personal watch list. 
+**Frontend**: Displays a list of available movies with an option to store them in your personal tracker.  
+**Backend**:  Makes sure to keep track if you've already seen the movie, or if you want to watch it, as well as list of all the movies user has added to the profile.
+
+**User Story**: I watched a lot of movies that are getting outdated now and I am no longer interested in seeing on my profile.
+**Frontend**: Provides neat features where user can move things around and edit the watchlist.
+**Backend**:  Updates, clears and saves the changes. 
+
+**User Story**:I want to start from the beginning. I am no longer interested in sci-fi 
+**Frontend**:Clear button!?  
+**Backend**:  Provides the fresh watchlist, from scratch. 
+
 
 #### Wireframes 
 
