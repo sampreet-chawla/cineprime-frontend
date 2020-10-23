@@ -145,11 +145,14 @@ Created using [https://stackedit.io/](https://stackedit.io/)
 
 ##### Post MVPs
 
-- Sorting the watchlist by different fields
-- D3 Banner
-- Add your rating to the movie
-- Dark and Light Themes
-- Clear the complete Watchlist
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Sorting the watchlist by different fields | M |  8hrs | hrs | hrs |   
+| D3 Banner | M |  5hrs | hrs | hrs |  
+| Add your rating to the movie | M |  8hrs | hrs | hrs |  
+| Dark and Light Themes | M |  8hrs | hrs | hrs |  
+| Clear the complete Watchlist | H |  3hrs | hrs | hrs |  
+
 
 
 
