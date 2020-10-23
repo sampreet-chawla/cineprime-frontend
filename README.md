@@ -44,8 +44,8 @@ We got inspired from the following sites and projects -
 **Frontend**: Displays a list of available movies with an option to store them in your personal tracker.   
 **Backend**:  Makes sure to keep track if you've already seen the movie, or if you want to watch it, as well as list of all the movies user has added to the  profile.  
 
-**User Story**: I watched a lot of movies that are getting outdated now and I am no longer interested in seeing on my profile. 
-**Frontend**: Provides neat features where user can move things around and edit the watchlist. 
+**User Story**: I watched a lot of movies that are getting outdated now and I am no longer interested in seeing on my profile.  
+**Frontend**: Provides neat features where user can move things around and edit the watchlist.  
 **Backend**:  Updates, clears and saves the changes.  
 
 **User Story**:I want to start from the beginning. I am no longer interested in sci-fi  
