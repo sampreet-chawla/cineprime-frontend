@@ -103,8 +103,8 @@ Created using [https://stackedit.io/](https://stackedit.io/)
 #### MVPs
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Repos setup | H | 8hrs | hrs | hrs |
-| Server and Connections | H | 1hrs | hrs | hrs |
+| Repos setup & Documentation | H | 5hrs | hrs | hrs |
+| Server and Connections | H | 2hrs | hrs | hrs |
 | Schemas | H | 1hr | hrs | hrs |
 | Controllers | H | 4hr | hrs | hrs |
 | Backend deployment | H | 1hrs | hrs | hrs |
