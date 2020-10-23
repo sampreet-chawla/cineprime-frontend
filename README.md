@@ -59,7 +59,7 @@ We got inspired from the following sites and projects -
 These wireframes are built using [Google Draw](https://docs.google.com/drawings/)
 
 - Mobile View - [Mobile-01](./img/wireframes/mobile/01.cineprime-mobile.png) and [Mobile-02](./img/wireframes/mobile/02.cineprime-mobile.png)
-- Tablet View - [Browse](./img/wireframes/tablet/01.browse-tablet.png), [Movie Details](./img/wireframes/tablet/02.details-tablet.png), [Sign Up / Sign In](./img/wireframes/tablet/03.signin-tablet.png), [Watchlist](./img/wireframes/tablet/04.watchlist-tablet.png) and [Team](./img/wireframes/tablet/05.team-tablet.png)
+- Tablet View - [Browse](./img/wireframes/tablet/01.browse-tablet.jpg), [Movie Details](./img/wireframes/tablet/02.details-tablet.jpg), [Sign Up / Sign In](./img/wireframes/tablet/03.signin-tablet.jpg), [Watchlist](./img/wireframes/tablet/04.watchlist-tablet.jpg) and [Team](./img/wireframes/tablet/05.team-tablet.jpg)
 - Desktop View - [Browse](./img/wireframes/desktop/01.browse-desktop.png), [Movie Details](./img/wireframes/desktop/02.details-desktop.png), [Sign Up / Sign In](./img/wireframes/desktop/03.signin-desktop.png), [Watchlist](./img/wireframes/desktop/04.watchlist-desktop.png) and [Team](./img/wireframes/desktop/05.team-desktop.png)
 
 The wireframes are built with initial design concept by Sampreet, and sketch drawings by Gourav Auluck, Google draw drawings by both Shayan Gagan and Gourav Auluck
