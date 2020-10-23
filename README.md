@@ -130,7 +130,7 @@ Created using [https://stackedit.io/](https://stackedit.io/)
 | Talking points drop down menu | L | 2hrs | 0hrs | 0hrs |
 | Confetti | L | 2hrs | 0hrs | 0hrs |
 | Alert | L | 1hrs| 0hrs | 0hrs |
-| Total | H | 86.5hrs| 114.5hrs | 114.5hrs |
+| Total | H | hrs| hrs | hrs |
 
 - Backend and Frontend repos
 - Signup/SignIn/Logout
