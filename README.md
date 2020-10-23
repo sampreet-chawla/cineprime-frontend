@@ -28,6 +28,8 @@ We got inspired from the following sites and projects -
 * [Good Reads Website](https://www.goodreads.com/) - For Wishlist CRUD Functionality
 * [Sampreet's bibiophile website](https://bibliophile.netlify.app/) - For initial wishlist inspiration
 
+
+
 ### User Story:
 
 **User Story**: *As a user, I would love to take a look at movies library, browse the movies and if I find what I like, I can easily 		add it to my watchlist track what I've seen.*
@@ -49,6 +51,7 @@ We got inspired from the following sites and projects -
 **User Story**:I want to start from the beginning. I am no longer interested in sci-fi 
 **Frontend**:Clear button!?  
 **Backend**:  Provides the fresh watchlist, from scratch. 
+
 
 
 #### Wireframes 
