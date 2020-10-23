@@ -137,8 +137,22 @@ A team collaborative effort on time estimation, created using [https://stackedit
 | **Total** | H | **32hrs**| hrs | hrs |
 
 
+### Additional Libraries
+- Bootstrap
+- Axios
+- React, react-router-dom
+- Node
+- Express
 
+### Frontend Code Snippets
 
+### Challenges
+
+### Limitations
+
+### Issues and Resolution
+
+### Unresolved Issues
 
 
 
