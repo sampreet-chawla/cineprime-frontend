@@ -37,7 +37,7 @@ We got inspired from the following sites and projects -
 **Backend**: *Stores the user's created profile & keeps track of his progress.*
 
 **User Story**: It actually sounds good. As a user I want to register for your service.
- **Frontend**: Offers the sign-up form, starts the account creation.
+**Frontend**: Offers the sign-up form, starts the account creation.
 **Backend**:  Processes user's data and saves it for further authentication. 
 
 **User Story**: I want to browse and create my personal watch list. 
