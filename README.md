@@ -37,10 +37,13 @@ These wireframes are built using [Google Draw](https://docs.google.com/drawings/
 - Tablet View - []()
 - Desktop View - [Browse](./img/wireframes/desktop/01.browse-desktop.png), [Movie Details](./img/wireframes/desktop/02.details-desktop.png), [Sign Up / Sign In](./img/wireframes/desktop/03.signin-desktop.png), [Watchlist](./img/wireframes/desktop/04.watchlist-desktop.png) and [Team](./img/wireframes/desktop/05.team-desktop.png)
 
+The wireframes are built with initial design concept by Sampreet, and sketch drawings by Gourav Auluck, Google draw drawings by both Shayan Gagan and Gourav Auluck
+
 
 #### React Architecture Diagram
 
 [cineprime - React Architecture Diagram](./img/cineprime-react-architecture.png)
+The React Architecture Diagram was built by Sampreet and formatted by Sampreet and Bojan Josilo.
 
 #### Routing Table
 
