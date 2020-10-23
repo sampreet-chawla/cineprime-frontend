@@ -26,6 +26,7 @@ We got inspired from the following sites and projects -
 
 * [Movie Flex App](https://movieflex-28ba7.web.app/) - for baneer and carousel 
 * [Good Reads Website](https://www.goodreads.com/) - For Wishlist CRUD Functionality
+* [Sampreet's bibiophile website](https://bibliophile.netlify.app/) - For initial wishlist inspiration
 
 
 #### Wireframes 
