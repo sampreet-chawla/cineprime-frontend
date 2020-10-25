@@ -1,7 +1,12 @@
 import './App.css';
 
-function App() {
-	return <h1>The App Component</h1>;
+import React from 'react';
+import { Table } from 'reactstrap';
+
+const Example = (props) => {
+  return (
+    <h1>The App Component</h1>
+  );
 }
 
-export default App;
+export default Example;
