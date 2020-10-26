@@ -1,0 +1,10 @@
+.moviePoster{
+    max-height: 200px;
+    object-fit: contain;
+  }
+  .movieCard{
+    margin: 10px;
+  }
+  .card-img, .card-img-top{
+    padding-top:10px;
+  }
