@@ -1,4 +1,8 @@
-# cineprime-frontend
+# cineprime 
+
+Deployed: [![Netlify Status](https://api.netlify.com/api/v1/badges/d857d1dc-2f49-4d31-a1c1-5f251145f0a9/deploy-status)](https://app.netlify.com/sites/cineprime/deploys)
+
+## cineprime-frontend
 cineprime-frontend is a "cineprime" web applications's  frontend repo - A mern-group-lab project as Unit3 lab assignment. It will be built in React, SASS and HTML. 
 The frontend app will communicate with the back-end API RESTfully to Create, Read, Update, and Destroy resources (using either fetch or axios). The frontend will also be responsive and work on mobile phones, tablets, and desktops
 
