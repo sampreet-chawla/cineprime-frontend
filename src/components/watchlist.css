@@ -10,7 +10,7 @@
     height: 500px;
     grid-template-columns: 300px;
     padding: 10px;
-    margin-left: 15%;
+    margin-left: 10%;
   }
 
   }
@@ -22,7 +22,7 @@
       height: 500px;
       grid-template-columns: 300px 300px;
       padding: 10px;
-      margin-left: 9%;
+      margin-left: 5%;
     }
   }
 
@@ -34,6 +34,6 @@
       height: 500px;
       grid-template-columns: 300px 300px 300px;
       padding: 10px;
-      margin-left: 25%;
+      margin-left: 15%;
     }
   }
