@@ -9,7 +9,12 @@ import './moviecard.css'
 
 const MovieCard = (props) => {   
 
-    
+    const handleDelete = (event) => {
+        event.preventDefault(); 
+        props.deleteMovie(props.movie);
+        props.history.push("/watchlist");
+      };
+
     const movie = props.movie;
 
     return(
@@ -26,9 +31,8 @@ const MovieCard = (props) => {
                 <CardTitle>Date Planned:{movie.datePlanned}</CardTitle>
                 <CardTitle>Date Watched:{movie.dateWatched}</CardTitle>
                 <CardTitle>Target Date Met:{movie.metTargetDate}</CardTitle>
-                <Button>Edit</Button>&nbsp;
-                <Button id="remove">Remove</Button>&nbsp;
-                <Button>Watched</Button>
+                <Button>Edit Dates</Button>&nbsp;
+                <Button id="remove" onClick={handleDelete}>Remove</Button>
             </CardBody>
         </Card>
     </div>);    

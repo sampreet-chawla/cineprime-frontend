@@ -42,7 +42,14 @@ const Watchlist = (props) => {
             });
             setWatchType("watched");
     };
-
+    //delete card
+    const deleteMovie = (movie) => {
+        fetch(`${baseURL}/id/${movie._id}`, {
+          method: "delete",
+        })
+        .then((response) => loadWantToWatchMovies())
+      }
+      
 
     React.useEffect(() => {
          loadWantToWatchMovies();
@@ -50,7 +57,7 @@ const Watchlist = (props) => {
 
     let movieJSX = <h3>No Movies in  your Watchlist. Please Browse and add them to the list.</h3>;
     if(movies.length > 0) {     
-        movieJSX = movies.map((movie, index) =>(<MovieCard movie={movie} key={index} />));
+        movieJSX = movies.map((movie, index) =>(<MovieCard history={props.history} movie={movie} key={index} deleteMovie={deleteMovie}/>));
     }   
 
     const checkedAll = (watchType === "all");
