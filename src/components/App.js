@@ -1,21 +1,23 @@
 import './App.css';
-import Watchlist from './Watchlist'
+import Watchlist from './Watchlist';
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from 'react-router-dom';
+import Footer from './Footer';
+import Header from './Header';
 
 const App = () => {
-
-return (
-  <div className='App'>
-      <h1>Navbar Place Holder</h1>
-      <Switch>
-      <Route
+	return (
+		<div className='App'>
+			<Header />
+			<Switch>
+				<Route
 					path='/watchlist'
 					render={(routerProps) => <Watchlist {...routerProps} user='Gore' />}
-          />
-      </Switch>
-    </div>
-  );
-}
+				/>
+			</Switch>
+			<Footer />
+		</div>
+	);
+};
 
 export default App;
