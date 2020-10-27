@@ -9,20 +9,14 @@ import './MovieCard.css'
 
 const MovieCard = (props) => {   
 
-    // const deleteMovie = (movie) => {
-    //     fetch(url + "/watchlist/" + movie._id, {
-    //       method: "delete",
-    //     })
-    //     .then((response) => getMovies())
-    //   }
-
+    
     const movie = props.movie;
 
     return(
     <div className="movieCard" >
 
 
-        <Card style={{ backgroundColor: '#456789', borderColor: '#456789' }}>
+        <Card style={{ backgroundColor: '#808080', borderColor: '#808080' }}>
             <CardImg top width="100%" className="moviePoster" src={movie.image} alt={movie.title} />
             <CardBody>
             <CardTitle>Movie Title:{movie.title}</CardTitle>
