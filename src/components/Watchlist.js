@@ -57,11 +57,13 @@ const Watchlist = (props) => {
     const checkedAWatchToWatch = (watchType === "want-to-watch");
 
     return (
-        <div className="movieCardContainer" >
-        <input type="radio" name="watchtype" value="all" onChange={() =>loadAllMovies()} checked={{checkedAll}} /> All
-        <input type="radio" name="watchtype" value="watched" onChange={() => loadWatchedMovies()} checked={checkedAWatched}/>Watched
+        <div className="radiobuttons">
+        <input type="radio" name="watchtype" value="all" onChange={() =>loadAllMovies()} checked={{checkedAll}} /> All &nbsp;&nbsp;|&nbsp;&nbsp; 
+        <input type="radio" name="watchtype" value="watched" onChange={() => loadWatchedMovies()} checked={checkedAWatched}/> Watched &nbsp;&nbsp;|&nbsp;&nbsp;
         <input type="radio" name="watchtype" value="want-to-watch" checked={{checkedAWatchToWatch}} onChange={() => loadWantToWatchMovies()}/> Want to Watch
+        <div className="movieCardContainer" >
        {movieJSX}
+        </div>
         </div>
     )
 }
