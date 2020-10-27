@@ -3,7 +3,7 @@ import {
     Card, CardImg, CardBody,
     CardTitle, Button
   } from 'reactstrap';
-import './moviecard.css'
+import './MovieCard.css'
 
 
 
