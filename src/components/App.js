@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Watchlist from './Watchlist'
+import { Route, Switch } from "react-router-dom";
 import Row from './Row';
 import requests from './Requests';
 import Banner from './Banner';
@@ -7,6 +9,13 @@ import Banner from './Banner';
 function App({ props }) {
 	return (
 	<div className="App">
+    <h1>Navbar Place Holder</h1>
+    <Switch>
+      <Route
+					path='/watchlist'
+					render={(routerProps) => <Watchlist {...routerProps} user='Gore' />}
+          />
+    </Switch>
 		<Banner />
 		<Row title="CINEPRIME ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} />
 		<Row title="Trending Now" fetchUrl={requests.fetchTrending} />
@@ -17,6 +26,5 @@ function App({ props }) {
 		<Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
 	</div>
 	);
-}
 
 export default App;
