@@ -1,14 +1,10 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 /* may need to delete above^ */
 
 * {
   margin: 0;
-}
-
-.App {
-  background-color: black;
 }
 
 .App-header {
