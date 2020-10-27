@@ -5,35 +5,41 @@
   @media only screen and (max-width: 425px) {
     .movieCardContainer{
     display: grid;
+    align-items: center;
+    justify-content: center;
     grid-gap: 10px;
     width: 400px;
-    height: 500px;
+    height: 100%;
     grid-template-columns: 300px;
     padding: 10px;
-    margin-left: 10%;
+    margin: 0 auto;
   }
 
   }
   @media only screen and (min-width: 768px) {
     .movieCardContainer{
       display: grid;
+      align-items: center;
+      justify-content: center;
       grid-gap: 10px;
       width: 400px;
-      height: 500px;
-      grid-template-columns: 300px 300px;
+      height: 100%;
+      grid-template-columns: 300px;
       padding: 10px;
-      margin-left: 5%;
+      margin: 0 auto;
     }
   }
 
   @media only screen and (min-width: 1024px) {
     .movieCardContainer{
       display: grid;
+      align-items: center;
+      justify-content: center;
       grid-gap: 10px;
       width: 400px;
-      height: 500px;
-      grid-template-columns: 300px 300px 300px;
+      height: 100%;
+      grid-template-columns: 300px 300px;
       padding: 10px;
-      margin-left: 15%;
+      margin: 0 auto;
     }
   }

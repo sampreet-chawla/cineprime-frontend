@@ -43,6 +43,7 @@ const Watchlist = (props) => {
             setWatchType("watched");
     };
 
+
     React.useEffect(() => {
          loadWantToWatchMovies();
     },[]);

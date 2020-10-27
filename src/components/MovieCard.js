@@ -9,13 +9,7 @@ import './moviecard.css'
 
 const MovieCard = (props) => {   
 
-    // const deleteMovie = (movie) => {
-    //     fetch(url + "/watchlist/" + movie._id, {
-    //       method: "delete",
-    //     })
-    //     .then((response) => getMovies())
-    //   }
-
+    
     const movie = props.movie;
 
     return(
