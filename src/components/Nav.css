@@ -38,8 +38,10 @@
 
 .nav-links:hover {
 	background-color: #1888ff;
+	color: white;
 	border-radius: 4px;
 	transition: all 0.2s ease-out;
+	text-decoration: none;
 }
 
 .fa-bars {
