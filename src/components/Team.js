@@ -1,14 +1,14 @@
 import React from 'react';
-// import './Team.css';
+import './Team.css';
 
 function Team() {
 	return (
 		<div class='team'>
 			<div class='container'>
-				<h1>Team that worked on this project:</h1>
-				<div class='card'>
+				<h1 id='about-title'>Team that worked on this project:</h1>
+				<div class='teamcard'>
 					<div class='box'>
-						<img src='sampreet3.jpg' alt='img' />
+						<img class='team-pic' src='sampreet3.jpg' alt='img' />
 						<h4>Sampreet Chawla</h4>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
@@ -22,10 +22,10 @@ function Team() {
 						</p>
 					</div>
 				</div>
-				<div class='card'>
+				<div class='teamcard'>
 					<div class='box'>
-						<img src='shayan.jpg' alt='img' />
-						<h4>Gagan Shayan</h4>
+						<img class='team-pic' src='shayan.jpg' alt='img' />
+						<h4>Shayan Gagan</h4>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
 							pellentesque at urna et vestibulum. Donec egestas nulla non dolor
@@ -38,9 +38,9 @@ function Team() {
 						</p>
 					</div>
 				</div>
-				<div class='card'>
+				<div class='teamcard'>
 					<div class='box'>
-						<img src='bojan.jpg' alt='img' id='bojan' />
+						<img class='team-pic' src='bojan.jpg' alt='img' id='bojan' />
 						<h4>Bojan Josilo</h4>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
@@ -54,9 +54,9 @@ function Team() {
 						</p>
 					</div>
 				</div>
-				<div class='card'>
+				<div class='teamcard'>
 					<div class='box'>
-						<img src='gore.jpg' alt='img' />
+						<img class='team-pic' src='gore.jpg' alt='img' />
 						<h4>Gourav Auluck</h4>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras

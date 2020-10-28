@@ -1,0 +1,78 @@
+* {
+	/* border: 1px solid red; */
+}
+
+.team {
+	min-height: 100vh;
+	padding: 50px 0px;
+	background-color: #22252a;
+	background-size: auto;
+	width: 100%;
+}
+.container {
+	margin: auto;
+	position: relative;
+}
+
+#about-title {
+	font-size: 36px;
+	font-weight: 600;
+	color: white;
+	padding-bottom: 60px;
+	text-align: center;
+}
+.teamcard {
+	width: 25%;
+	float: left;
+	padding: 0px 15px;
+}
+.box {
+	min-height: 100vh;
+	padding: 15px;
+	background-color: rgb(53, 52, 52);
+	border-radius: 5px;
+	transition: margin 1s ease, box-shadow 1s ease;
+}
+.box:hover {
+	margin-top: -15px;
+	box-shadow: 0px 0px 50px #f4d32a;
+}
+.team-pic {
+	width: 160px;
+	height: 160px;
+	display: block;
+	margin: 10px auto;
+	border-radius: 50%;
+	size: contain;
+}
+
+.box h4 {
+	font-size: 20px;
+	font-family: open sans;
+	margin: 20px 0px 10px;
+	color: #fb665c;
+	text-align: center;
+	font-weight: 700;
+}
+
+.box p {
+	color: #b9b9b9;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: center;
+	padding: 0px 20px;
+}
+
+@media (max-width: 991px) {
+	.teamcard {
+		width: 45%;
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 550px) {
+	.teamcard {
+		width: 100%;
+	}
+}
