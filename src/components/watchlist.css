@@ -1,45 +1,61 @@
-  /* .radiobuttons{
-    color: white;
-  } */
+.radiobuttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 15px;
+	color: white;
+}
+.movieCardContainer {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+.buttonContainer {
+	display: flex;
+	justify-content: center;
+}
 
-  @media only screen and (max-width: 425px) {
-    .movieCardContainer{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-gap: 10px;
-    width: 400px;
-    height: 100%;
-    grid-template-columns: 300px;
-    padding: 10px;
-    margin: 0 auto;
-  }
+body {
+	background-color: #22252a !important;
+}
 
-  }
-  @media only screen and (min-width: 768px) {
-    .movieCardContainer{
-      display: grid;
-      align-items: center;
-      justify-content: center;
-      grid-gap: 10px;
-      width: 400px;
-      height: 100%;
-      grid-template-columns: 300px;
-      padding: 10px;
-      margin: 0 auto;
-    }
-  }
+@media only screen and (max-width: 425px) {
+	.movieCardContainer {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		grid-gap: 10px;
+		width: 400px;
+		height: 100%;
+		grid-template-columns: 300px;
+		padding: 10px;
+		margin: 0 auto;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.movieCardContainer {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		grid-gap: 10px;
+		width: 400px;
+		height: 100%;
+		grid-template-columns: 300px;
+		padding: 10px;
+		margin: 0 auto;
+	}
+}
 
-  @media only screen and (min-width: 1024px) {
-    .movieCardContainer{
-      display: grid;
-      align-items: center;
-      justify-content: center;
-      grid-gap: 10px;
-      width: 400px;
-      height: 100%;
-      grid-template-columns: 300px 300px;
-      padding: 10px;
-      margin: 0 auto;
-    }
-  }
+@media only screen and (min-width: 1024px) {
+	.movieCardContainer {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		grid-gap: 10px;
+		width: 400px;
+		height: 100%;
+		grid-template-columns: 300px 300px;
+		padding: 10px;
+		margin: 0 auto;
+	}
+}

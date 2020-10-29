@@ -3,17 +3,14 @@ import { Switch } from 'react-router';
 import MovieCard from './MovieCard';
 import './watchlist.css';
 import { Button } from 'reactstrap';
-
 const Watchlist = (props) => {
 	// console.log("movie props in card", {movie})
 	console.log(props);
 	// const baseURL = process.env.BACKEND_BASE_URL;
 	const baseURL = 'http://localhost:4501/api/movies';
 	const token = props.token;
-
 	const [movies, setMovies] = React.useState([]);
 	const [watchType, setWatchType] = React.useState('want-to-watch');
-
 	const loadWantToWatchMovies = () => {
 		fetch(`${baseURL}/wantToWatch/user/${props.user}`, {
 			method: 'get',
@@ -65,7 +62,6 @@ const Watchlist = (props) => {
 			},
 		}).then((response) => loadWantToWatchMovies());
 	};
-
 	// clear Watchlist
 	const handleClearWatchlist = () => {
 		fetch(`${baseURL}/user/${props.user}`, {
@@ -75,7 +71,6 @@ const Watchlist = (props) => {
 			},
 		}).then((response) => loadWantToWatchMovies());
 	};
-
 	//save dates for a movie
 	const saveDatesForMovie = (movieId, datesObj) => {
 		console.log('In saveDatesForMovie ', datesObj);
@@ -95,11 +90,9 @@ const Watchlist = (props) => {
 				console.log('Error saving dates for the movie: ', err.message);
 			});
 	};
-
 	React.useEffect(() => {
 		loadWantToWatchMovies();
 	}, []);
-
 	let movieJSX = (
 		<h3>
 			No Movies in your Watchlist. Please Browse and add them to the list.
@@ -117,41 +110,46 @@ const Watchlist = (props) => {
 			/>
 		));
 	}
-
 	const checkedAll = watchType === 'all';
 	const checkedWatched = watchType === 'watched';
 	const checkedWatchToWatch = watchType === 'want-to-watch';
-
 	return (
-		<div className='radiobuttons'>
-			<input
-				type='radio'
-				name='watchtype'
-				value='all'
-				onChange={() => loadAllMovies()}
-				checked={{ checkedAll }}
-			/>{' '}
-			All &nbsp;&nbsp;|&nbsp;&nbsp;
-			<input
-				type='radio'
-				name='watchtype'
-				value='watched'
-				onChange={() => loadWatchedMovies()}
-				checked={checkedWatched}
-			/>{' '}
-			Watched &nbsp;&nbsp;|&nbsp;&nbsp;
-			<input
-				type='radio'
-				name='watchtype'
-				value='want-to-watch'
-				checked={{ checkedWatchToWatch }}
-				onChange={() => loadWantToWatchMovies()}
-			/>{' '}
-			Want to Watch &nbsp;&nbsp;
-			<Button onClick={handleClearWatchlist}>Clear Watchlist</Button>&nbsp;
+		<div className='watchlistContainer'>
+			<div className='radiobuttons'>
+				<input
+					type='radio'
+					name='watchtype'
+					value='all'
+					onChange={() => loadAllMovies()}
+					checked={{ checkedAll }}
+				/>
+				&nbsp; All &nbsp;&nbsp;|&nbsp;&nbsp;
+				<input
+					type='radio'
+					name='watchtype'
+					value='watched'
+					onChange={() => loadWatchedMovies()}
+					checked={checkedWatched}
+				/>
+				&nbsp; Watched &nbsp;&nbsp;|&nbsp;&nbsp;
+				<input
+					type='radio'
+					name='watchtype'
+					value='want-to-watch'
+					checked={{ checkedWatchToWatch }}
+					onChange={() => loadWantToWatchMovies()}
+				/>
+				&nbsp;Want to Watch &nbsp;&nbsp;
+				<br />
+				{/* <Button onClick={handleClearWatchlist}>Clear Watchlist</Button>&nbsp; */}
+			</div>
+			<br />
+			<div className='buttonContainer'>
+				<Button onClick={handleClearWatchlist}>Clear Watchlist</Button>&nbsp;
+			</div>
+			<br />
 			<div className='movieCardContainer'>{movieJSX}</div>
 		</div>
 	);
 };
-
 export default Watchlist;

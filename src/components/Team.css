@@ -1,5 +1,5 @@
 .team {
-	min-height: 115vh;
+	/* min-height: 115vh; */
 	padding: 50px 0px;
 	background-color: #22252a;
 	background-size: 100%;
@@ -85,9 +85,7 @@
 		width: 100%;
 		margin-bottom: 30px;
 	}
-	.team {
-		min-height: 192vh;
-	}
+
 	.container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -98,9 +96,7 @@
 	.teamcard {
 		width: 100%;
 	}
-	.team {
-		min-height: 316vh;
-	}
+
 	.container {
 		display: grid;
 		grid-template-columns: 1fr;
