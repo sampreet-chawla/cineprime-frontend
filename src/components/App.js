@@ -8,6 +8,7 @@ import Signup from './Signup';
 import MovieDetails from './MovieDetails';
 import Footer from './Footer';
 import Header from './Header';
+export const appContext = React.createContext(null);
 
 function App(props) {
 	const tokenValue =
@@ -17,43 +18,44 @@ function App(props) {
 	const [user, setUser] = React.useState('Gore');
 
 	return (
-		<div className='App'>
-			<Header user={user} token={token} />
+		<appContext.Provider value={{ user: user, token: token }}>
+			<div className='App'>
+				<Header user={user} token={token} />
+				<Switch>
+					<Route
+						path='/'
+						exact={true}
+						render={(routerProps) => (
+							<Browse {...routerProps} user={user} token={token} />
+						)}
+					/>
+					<Route
+						path='/watchlist'
+						exact={true}
+						render={(routerProps) => (
+							<Watchlist {...routerProps} user={user} token={token} />
+						)}
+					/>
+					<Route
+						path='/team'
+						exact={true}
+						render={(routerProps) => <Team {...routerProps} />}
+					/>
+					<Route
+						path='/signup'
+						exact={true}
+						render={(routerProps) => <Signup {...routerProps} />}
+					/>
+					<Route
+						path='/moviedetails'
+						exact={true}
+						render={(routerProps) => <MovieDetails {...routerProps} />}
+					/>
+				</Switch>
 
-			<Switch>
-				<Route
-					path='/'
-					exact={true}
-					render={(routerProps) => (
-						<Browse {...routerProps} user={user} token={token} />
-					)}
-				/>
-				<Route
-					path='/watchlist'
-					exact={true}
-					render={(routerProps) => (
-						<Watchlist {...routerProps} user={user} token={token} />
-					)}
-				/>
-				<Route
-					path='/team'
-					exact={true}
-					render={(routerProps) => <Team {...routerProps} />}
-				/>
-				<Route
-					path='/signup'
-					exact={true}
-					render={(routerProps) => <Signup {...routerProps} />}
-				/>
-				<Route
-					path='/moviedetails'
-					exact={true}
-					render={(routerProps) => <MovieDetails {...routerProps} />}
-				/>
-			</Switch>
-
-			<Footer />
-		</div>
+				<Footer />
+			</div>
+		</appContext.Provider>
 	);
 }
 
