@@ -4,8 +4,8 @@ import './Team.css';
 function Team() {
 	return (
 		<div className='team'>
+			<h1 id='about-title'>Team that worked on this project:</h1>
 			<div className='container'>
-				<h1 id='about-title'>Team that worked on this project:</h1>
 				<div className='teamcard'>
 					<div className='box'>
 						<div id='img-div'>

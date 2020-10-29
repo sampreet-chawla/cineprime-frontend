@@ -34,6 +34,7 @@
 .nav-links {
 	color: white;
 	text-decoration: none;
+	font-family: 'Syne Mono', monospace;
 }
 
 .nav-links:hover {

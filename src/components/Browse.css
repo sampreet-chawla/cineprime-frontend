@@ -1,7 +1,8 @@
 * {
-    margin: 0;
-  }
-  
-  .Browse {
-    background-color: black;
-  }
+	margin: 0;
+}
+
+.Browse {
+	background-color: black;
+	overflow: hidden;
+}

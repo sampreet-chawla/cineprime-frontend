@@ -1,11 +1,16 @@
-
-.moviePoster{
-    max-height: 200px;
-    object-fit: contain;
-  }
-  .movieCard{
-    margin: 10px;
-  }
-  .card-img, .card-img-top{
-    padding-top:10px;
-  }
+.moviePoster {
+	max-height: 200px;
+	object-fit: contain;
+}
+.movieCard {
+	margin: 10px;
+}
+.card-img,
+.card-img-top {
+	padding-top: 10px;
+}
+/*
+ #fb665c; (reddish clr - from logo)
+ #f4d32a; (yellow clr - from logo)
+ background-color: #22252a;
+*/
