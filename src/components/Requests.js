@@ -1,4 +1,7 @@
-const API_KEY = '87bb6c1a1b5662d9698dca39980c3a88';
+import { TMDB_API_KEY } from './Info';
+
+//const API_KEY = '87bb6c1a1b5662d9698dca39980c3a88';
+const API_KEY = TMDB_API_KEY;
 
 const requests = {
 	fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
