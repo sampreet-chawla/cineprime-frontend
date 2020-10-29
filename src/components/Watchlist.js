@@ -7,9 +7,9 @@ import { Button } from 'reactstrap';
 const Watchlist = (props) => {
 	// console.log("movie props in card", {movie})
 	console.log(props);
+	// const baseURL = process.env.BACKEND_BASE_URL;
 	const baseURL = 'http://localhost:4501/api/movies';
-	const token =
-		'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE2MDM4NTM3MDZ9.oGyhMdF-5YCgZ1zGT6phIhQWYT8_UIvHOmSSBII_qA8';
+	const token = props.token;
 
 	const [movies, setMovies] = React.useState([]);
 	const [watchType, setWatchType] = React.useState('want-to-watch');

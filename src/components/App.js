@@ -9,21 +9,31 @@ import MovieDetails from './MovieDetails';
 import Footer from './Footer';
 import Header from './Header';
 
-function App({ props }) {
+function App(props) {
+	const tokenValue =
+		'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkdvcmUiLCJpYXQiOjE2MDM5NDQwMzZ9.ceRuooBqVHbcvmo8OyGmq9We7iYIYNmBJT5QfYwq5bs';
+
+	const [token, setToken] = React.useState(tokenValue);
+	const [user, setUser] = React.useState('Gore');
+
 	return (
 		<div className='App'>
-			<Header />
+			<Header user={user} token={token} />
 
 			<Switch>
 				<Route
 					path='/'
 					exact={true}
-					render={(routerProps) => <Browse {...routerProps} />}
+					render={(routerProps) => (
+						<Browse {...routerProps} user={user} token={token} />
+					)}
 				/>
 				<Route
 					path='/watchlist'
 					exact={true}
-					render={(routerProps) => <Watchlist {...routerProps} user='Gore' />}
+					render={(routerProps) => (
+						<Watchlist {...routerProps} user={user} token={token} />
+					)}
 				/>
 				<Route
 					path='/team'
@@ -41,6 +51,7 @@ function App({ props }) {
 					render={(routerProps) => <MovieDetails {...routerProps} />}
 				/>
 			</Switch>
+
 			<Footer />
 		</div>
 	);
