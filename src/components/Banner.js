@@ -41,9 +41,8 @@ function Banner() {
 				</h1>
 
 				<div className='banner_buttons'>
-					<button className='banner_button'>
-						Sign-In and enjoy your own Watchlist
-					</button>
+					<button className='banner_button'>Play</button>
+					<button className='banner_button'>Add to Watchlist</button>
 				</div>
 
 				<h1 className='banner_description'>{truncate(movie?.overview, 150)}</h1>
