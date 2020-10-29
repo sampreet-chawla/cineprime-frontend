@@ -15,6 +15,10 @@ function App(props) {
 
 	const [token, setToken] = React.useState(tokenValue);
 	const [user, setUser] = React.useState('Gore');
+	const [selectedMovie, setSelectedMovie] = React.useState({});
+	const handleSelectedMovie = (movie) => {
+		setSelectedMovie(movie)
+	};
 
 	return (
 		<div className='App'>
@@ -25,7 +29,7 @@ function App(props) {
 					path='/'
 					exact={true}
 					render={(routerProps) => (
-						<Browse {...routerProps} user={user} token={token} />
+						<Browse {...routerProps} user={user} token={token} handleSelectedMovie={handleSelectedMovie}/>
 					)}
 				/>
 				<Route
@@ -48,7 +52,7 @@ function App(props) {
 				<Route
 					path='/moviedetails'
 					exact={true}
-					render={(routerProps) => <MovieDetails {...routerProps} />}
+					render={(routerProps) => <MovieDetails {...routerProps} movie={selectedMovie} setSelectedMovie={setSelectedMovie}></MovieDetails>}
 				/>
 			</Switch>
 

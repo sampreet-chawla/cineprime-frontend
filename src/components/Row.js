@@ -6,7 +6,9 @@ import movieTrailer from "movie-trailer";
 
 const base_Url = "https://image.tmdb.org/t/p/original/";
 
-function Row({ title, fetchUrl }) {
+function Row( props ) {
+    const title = props.title;
+    const fetchUrl = props.fetchUrl;
     const [movies, setMovies] = useState([]);
     const [trailerUrl, setTrailerUrl] = useState("");
 
@@ -31,16 +33,18 @@ function Row({ title, fetchUrl }) {
     };
 
     const handleClick = (movie) => {
-        if (trailerUrl) {
-            setTrailerUrl("");
-        } else {
-            movieTrailer(movie?.name || "")
-            .then((url) => {
-                const urlParams = new URLSearchParams(new URL(url).search);
-                setTrailerUrl(urlParams.get('v'));
-            })
-            .catch((error) => console.log(error));
-        }
+        // if (trailerUrl) {
+        //     setTrailerUrl("");
+        // } else {
+        //     movieTrailer(movie?.name || "")
+        //     .then((url) => {
+        //         const urlParams = new URLSearchParams(new URL(url).search);
+        //         setTrailerUrl(urlParams.get('v'));
+        //     })
+        //     .catch((error) => console.log(error));
+        // }
+        props.handleSelectedMovie(movie);
+        props.history.push('/moviedetails')
     };
 
     return (
