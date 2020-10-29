@@ -96,7 +96,7 @@ function Row({ title, fetchUrl }) {
 					<Button id='addMovie' onClick={(event) => handleCloseAddMovie(event)}>
 						X
 					</Button>
-
+					<br />
 					<CardImg
 						top
 						width='100%'
