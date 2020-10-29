@@ -1,12 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css';
+import { appContext } from './App.js';
 
 function Nav(props) {
+
 	const [click, setClick] = React.useState(false);
+	const appCtx = React.useContext(appContext);
 
 	const handleClick = () => setClick(!click);
 	const closeBurger = () => setClick(false);
+
+	const handleLoginFormClick = () => {
+		props.setModalShow(true);
+		closeBurger();
+	};
 
 	return (
 		<nav className='navbar'>
@@ -20,6 +28,11 @@ function Nav(props) {
 				<li className='nav-item'>
 					<Link to='/' className='nav-links' onClick={closeBurger}>
 						Browse
+					</Link>
+				</li>				
+				<li className='nav-item'>
+					<Link to='/' className='nav-links' onClick={handleLoginFormClick}>
+						Sign Up/In
 					</Link>
 				</li>
 				<li className='nav-item'>

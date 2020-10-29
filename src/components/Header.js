@@ -2,10 +2,10 @@ import React from 'react';
 import Nav from './Nav';
 import './Header.css';
 
-function Header() {
+function Header(props) {
 	return (
 		<div className='Header'>
-			<Nav />
+			<Nav setModalShow={props.setModalShow} />
 		</div>
 	);
 }
