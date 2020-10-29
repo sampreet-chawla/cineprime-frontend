@@ -15,6 +15,7 @@ footer p {
 	text-align: center;
 	color: white;
 	height: 100%;
+	font-family: 'Syne Mono', monospace;
 }
 
 @media screen and (max-width: 768px) {
