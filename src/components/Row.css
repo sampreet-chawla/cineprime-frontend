@@ -27,7 +27,31 @@
 	transform: scale(1.08);
 }
 
-.row h2 {
+.category {
 	padding-left: 30px;
 	font-family: 'Syne Mono', monospace;
+}
+.cardSubContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1;
+}
+.cardBody {
+	text-align: center;
+	font-family: 'Syne Mono', monospace;
+	background: black;
+	color: white;
+	width: 100vw;
+}
+.jsxOverview {
+	width: 50%;
+	margin: 0 auto;
+}
+.movieDetails {
+	margin: 0 auto;
+}
+
+div.card {
+	border: black;
+	background: black;
 }

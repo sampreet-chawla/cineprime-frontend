@@ -96,22 +96,35 @@ function Row({ title, fetchUrl }) {
 					<Button id='addMovie' onClick={(event) => handleCloseAddMovie(event)}>
 						X
 					</Button>
+
 					<CardImg
 						top
 						width='100%'
 						className='moviePoster'
-						src={movie.poster_path}
+						src={`${base_Url}${movie.poster_path}`}
 						alt={movie.name}
 					/>
-					<CardBody>
-						<CardTitle>Movie Title:{movie.name}</CardTitle>
-						<Button
-							id='addMovie'
-							onClick={(event) => handleAddMovie(event, movie.id)}>
-							Add to Watchlist
-						</Button>
-						{trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
+					<CardBody className='cardBody'>
+						<div className='movieInfoCard'>
+							<h2 className='jsxTitle'>{movie.name}</h2>
+							<br />
+							<h5 className='jsxRating'>
+								Rating: {movie.vote_average}/10 by {movie.vote_count} users
+							</h5>
+							<h5 className='jsxRelease'>
+								Release Date: {movie.first_air_date}
+							</h5>
+							<br />
+							<h5 className='jsxOverview'>{movie.overview}</h5>
+						</div>
+						<br />
 					</CardBody>
+					<Button
+						id='addMovie'
+						onClick={(event) => handleAddMovie(event, movie.id)}>
+						Add to Watchlist
+					</Button>
+					{trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
 				</Card>
 			</div>
 		);
@@ -119,7 +132,7 @@ function Row({ title, fetchUrl }) {
 
 	return (
 		<div className='row'>
-			<h2>{title}</h2>
+			<h2 className='category'>{title}</h2>
 			<div className='row_posters'>
 				{movies.map((movie) => (
 					<img
