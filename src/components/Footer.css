@@ -1,0 +1,39 @@
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 32px;
+	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+footer p {
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	height: 100%;
+	font-family: 'Syne Mono', monospace;
+}
+
+@media screen and (max-width: 768px) {
+	footer {
+		z-index: 2;
+	}
+
+	.cheers {
+		height: 60px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	footer p {
+		font-size: 14px;
+		text-align: center;
+		color: white;
+		vertical-align: middle;
+		padding-top: 2.5px;
+	}
+}
