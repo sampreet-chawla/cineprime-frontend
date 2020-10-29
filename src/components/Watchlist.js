@@ -3,11 +3,14 @@ import { Switch } from 'react-router';
 import MovieCard from './MovieCard';
 import './watchlist.css';
 import { Button } from 'reactstrap';
+import { BACKEND_API_URL } from './Info';
+
 const Watchlist = (props) => {
 	// console.log("movie props in card", {movie})
 	console.log(props);
 	// const baseURL = process.env.BACKEND_BASE_URL;
-	const baseURL = 'http://localhost:4501/api/movies';
+	//const baseURL = 'http://localhost:4501/api/movies';
+	const baseURL = `${BACKEND_API_URL}/api/movies`;
 	const token = props.token;
 	const [movies, setMovies] = React.useState([]);
 	const [watchType, setWatchType] = React.useState('want-to-watch');

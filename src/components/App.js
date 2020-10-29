@@ -4,18 +4,17 @@ import { Route, Switch } from 'react-router-dom';
 import Watchlist from './Watchlist';
 import Browse from './Browse';
 import Team from './Team';
-import Signup from './Signup';
-import MovieDetails from './MovieDetails';
 import Footer from './Footer';
 import Header from './Header';
 import { Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
-//import LoginForm from './LoginForm';
+import { BACKEND_API_URL } from './Info.js';
 
 export const appContext = React.createContext(null);
 
 function LoginForm(props) {
-	const backendURL = 'http://localhost:4501';
+	//const backendURL = 'http://localhost:4501';
+	const backendURL = BACKEND_API_URL;
 	const appCtx = React.useContext(appContext);
 
 	const [formData, setFormData] = React.useState({
@@ -204,16 +203,6 @@ function App(props) {
 						path='/team'
 						exact={true}
 						render={(routerProps) => <Team {...routerProps} />}
-					/>
-					<Route
-						path='/signup'
-						exact={true}
-						render={(routerProps) => <Signup {...routerProps} />}
-					/>
-					<Route
-						path='/moviedetails'
-						exact={true}
-						render={(routerProps) => <MovieDetails {...routerProps} />}
 					/>
 				</Switch>
 
