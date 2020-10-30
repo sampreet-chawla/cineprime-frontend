@@ -38,13 +38,18 @@ function Team() {
 						</div>
 						<h4 className='member-names'>Shayan Gagan</h4>
 						<p>
-							Shayan contributed in working with group members to digitize the
-							responsive wireframes, implementing features of the browse page,
-							and implemented parts of the CSS alongside his group members.
+							Shayan is a recent college graduate with a background in economics
+							and finance, looking to transition into the role of a software
+							engineer. He enjoys working primarily in the front end, and is
+							always open to learning and working with new technologies. In this
+							project he contributed by digitizing wireframes, implementing
+							features of the browse page, designing parts of the CSS,
+							creating/routing react components, as well as grasping a better
+							understanding of the git terminal alongside his group members.
 							Connect with him on{' '}
 							<a href='https://www.linkedin.com/in/shayangagan'>LinkedIn</a> or
 							check out some of his other works on{' '}
-							<a href='https://github.com/gaganshayan'>GitHub</a> .
+							<a href='https://github.com/gaganshayan'>GitHub</a>.
 						</p>
 					</div>
 				</div>

@@ -7,27 +7,41 @@ import { FcApproval, FcAlarmClock } from 'react-icons/fc';
 
 const MovieCard = (props) => {
 	const movie = props.movie;
-
+	const key = props.index;
+	console.log('MovieCard key ', key);
 	const planDate = movie.datePlanned ? new Date(movie.datePlanned) : null;
 	const watchedDate = movie.dateWatched ? new Date(movie.dateWatched) : null;
-	const [selectedPlanDate, setSelectedPlanDate] = useState(planDate);
-	const [selectedWatchedDate, setSelectedWatchedDate] = useState(watchedDate);
+	const [formData, setFormData] = useState({
+		datePlanned: planDate,
+		dateWatched: watchedDate,
+	});
 
-	const handleEditDates = (event) => {
+	const handleChange = (value, name) => {
+		console.log(`${value} for ${name}`);
+		setFormData({ ...formData, [name]: new Date(value) });
+	};
+
+	const handleSaveDates = (event) => {
 		event.preventDefault();
-		const planDate = selectedPlanDate
-			? `${selectedPlanDate.getFullYear()}-${selectedPlanDate.getMonth()}-${selectedPlanDate.getDay()}`
+		const date1 = formData.datePlanned;
+		const planDate = date1
+			? `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDay()}`
 			: null;
-		const watchedDate = selectedWatchedDate
-			? `${selectedWatchedDate.getFullYear()}-${selectedWatchedDate.getMonth()}-${selectedWatchedDate.getDay()}`
+		const date2 = formData.dateWatched;
+		const watchedDate = date2
+			? `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDay()}`
 			: null;
 		console.log(`${planDate} and ${watchedDate}`);
 		props.saveDatesForMovie(movie._id, {
-			datePlanned: planDate,
-			dateWatched: watchedDate,
+			datePlanned: date1,
+			dateWatched: date2,
 		});
-		// setSelectedPlanDate(null);
-		// setSelectedWatchedDate(null);
+		document.getElementById(`save-dates-msg${key}`).innerHTML =
+			'Saved the dates.';
+		// setFormData({
+		// 	datePlanned: planDate,
+		// 	dateWatched: watchedDate,
+		// });
 		props.history.push('/watchlist');
 	};
 
@@ -61,8 +75,9 @@ const MovieCard = (props) => {
 				<CardTitle>
 					Date Planned:
 					<DatePicker
-						selected={selectedPlanDate}
-						onChange={(date) => setSelectedPlanDate(date)}
+						name='datePlanned'
+						selected={formData.datePlanned}
+						onChange={(e) => handleChange(e, 'datePlanned')}
 						dateFormat='yyyy-MM-dd'
 						minDate={new Date().setDate(new Date().getDate() - 30 * 2)}
 						maxDate={new Date().setDate(new Date().getDate() + 30 * 6)}
@@ -71,14 +86,16 @@ const MovieCard = (props) => {
 				<CardTitle>
 					Date Watched:
 					<DatePicker
-						selected={selectedWatchedDate}
-						onChange={(date) => setSelectedWatchedDate(date)}
+						name='dateWatched'
+						selected={formData.dateWatched}
+						onChange={(e) => handleChange(e, 'dateWatched')}
 						dateFormat='yyyy-MM-dd'
 						minDate={new Date().setDate(new Date().getDate() - 30 * 2)}
 						maxDate={new Date().setDate(new Date().getDate() + 30 * 6)}
 					/>
 				</CardTitle>
-				<Button onClick={handleEditDates}>Save Dates</Button>&nbsp;
+				<p id={`save-dates-msg${key}`}></p>
+				<Button onClick={handleSaveDates}>Save Dates</Button>&nbsp;
 			</>
 		);
 	}
