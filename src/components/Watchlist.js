@@ -10,7 +10,7 @@ const Watchlist = (props) => {
 	const token = props.token;
 	const [movies, setMovies] = React.useState([]);
 	const [watchType, setWatchType] = React.useState('want-to-watch');
-	const loadWantToWatchMovies = () => {
+	const loadWantToWatchMovies = (event) => {
 		fetch(`${baseURL}/wantToWatch/user/${props.user}`, {
 			method: 'get',
 			headers: {
@@ -23,8 +23,9 @@ const Watchlist = (props) => {
 				console.log('movie data in the fetch call', data);
 			});
 		setWatchType('want-to-watch');
+		//setWatchType(event.target.value);
 	};
-	const loadAllMovies = () => {
+	const loadAllMovies = (event) => {
 		fetch(`${baseURL}/all/user/${props.user}`, {
 			method: 'get',
 			headers: {
@@ -37,8 +38,9 @@ const Watchlist = (props) => {
 				console.log('movie data in the fetch call', data);
 			});
 		setWatchType('all');
+		//setWatchType(event.target.value);
 	};
-	const loadWatchedMovies = () => {
+	const loadWatchedMovies = (event) => {
 		fetch(`${baseURL}/watched/user/${props.user}`, {
 			method: 'get',
 			headers: {
@@ -51,6 +53,7 @@ const Watchlist = (props) => {
 				console.log('movie data in the fetch call', data);
 			});
 		setWatchType('watched');
+		//setWatchType(event.target.value);
 	};
 	//delete a movie from watchlist
 	const deleteMovie = (movie) => {
@@ -62,7 +65,8 @@ const Watchlist = (props) => {
 		}).then((response) => loadWantToWatchMovies());
 	};
 	// clear Watchlist
-	const handleClearWatchlist = () => {
+	const handleClearWatchlist = (event) => {
+		event.preventDefault();
 		fetch(`${baseURL}/user/${props.user}`, {
 			method: 'delete',
 			headers: {
@@ -104,39 +108,41 @@ const Watchlist = (props) => {
 				history={props.history}
 				movie={movie}
 				key={index}
+				index={movie.movieId}
 				deleteMovie={deleteMovie}
 				saveDatesForMovie={saveDatesForMovie}
 			/>
 		));
 	}
-	const checkedAll = watchType === 'all';
-	const checkedWatched = watchType === 'watched';
-	const checkedWatchToWatch = watchType === 'want-to-watch';
+	// const checkedAll = watchType === 'all';
+	// const checkedWatched = watchType === 'watched';
+	// const checkedWatchToWatch = watchType === 'want-to-watch';
 	return (
 		<div className='watchlistContainer'>
+			<h4>{props.user}'s Watchlist</h4>
 			<div className='radiobuttons'>
 				<input
 					type='radio'
-					name='watchtype'
+					name='watchType'
 					value='all'
-					onChange={() => loadAllMovies()}
-					checked={{ checkedAll }}
+					onChange={(e) => loadAllMovies(e)}
+					checked={watchType === 'all'}
 				/>
 				&nbsp; All &nbsp;&nbsp;|&nbsp;&nbsp;
 				<input
 					type='radio'
-					name='watchtype'
+					name='watchType'
 					value='watched'
-					onChange={() => loadWatchedMovies()}
-					checked={checkedWatched}
+					onChange={(e) => loadWatchedMovies(e)}
+					checked={watchType === 'watched'}
 				/>
 				&nbsp; Watched &nbsp;&nbsp;|&nbsp;&nbsp;
 				<input
 					type='radio'
-					name='watchtype'
+					name='watchType'
 					value='want-to-watch'
-					checked={{ checkedWatchToWatch }}
-					onChange={() => loadWantToWatchMovies()}
+					checked={watchType === 'want-to-watch'}
+					onChange={(e) => loadWantToWatchMovies(e)}
 				/>
 				&nbsp;Want to Watch &nbsp;&nbsp;
 				<br />

@@ -1,3 +1,10 @@
+.watchlistContainer h4 {
+	color: white;
+	text-align: center;
+	padding-top: 30px;
+	font-family: 'Syne Mono', monospace;
+}
+
 .radiobuttons {
 	display: flex;
 	align-items: center;

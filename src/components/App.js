@@ -26,7 +26,6 @@ function LoginForm(props) {
 
 	const handleSignUp = async (event) => {
 		event.preventDefault();
-		console.log('Inside handleSignUp : ', JSON.stringify(formData));
 
 		if (formData.username === '' || formData.password === '') {
 			document.getElementById(
@@ -69,7 +68,6 @@ function LoginForm(props) {
 
 	const handleSignIn = async (event) => {
 		event.preventDefault();
-		console.log('Inside handleSignIn : ', JSON.stringify(formData));
 		if (formData.username === '' || formData.password === '') {
 			document.getElementById(
 				'form-error-message'
@@ -85,9 +83,7 @@ function LoginForm(props) {
 				},
 				data: JSON.stringify(formData),
 			});
-			console.log(`Sign In response: `, data.data);
 			const token = data.data.token;
-			console.log(`Sign In response token: `, token);
 			if (data.data) {
 				if (data.data.token) {
 					document.getElementById(
@@ -196,7 +192,6 @@ function App(props) {
 	const saveLoginInfo = (user, token) => {
 		setUser(user);
 		setToken(token);
-		console.log(`saveLoginInfo: User ${user} and token ${token} set.`);
 	};
 
 	const handleLogout = () => {
