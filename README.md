@@ -3,8 +3,8 @@
 Deployed: [![Netlify Status](https://api.netlify.com/api/v1/badges/d857d1dc-2f49-4d31-a1c1-5f251145f0a9/deploy-status)](https://app.netlify.com/sites/cineprime/deploys)
 
 ## cineprime-frontend
-cineprime-frontend is a "cineprime" web applications's  frontend repo - A mern-group-lab project as Unit3 lab assignment. It will be built in React, SASS and HTML. 
-The frontend app will communicate with the back-end API RESTfully to Create, Read, Update, and Destroy resources (using either fetch or axios). The frontend will also be responsive and work on mobile phones, tablets, and desktops
+cineprime-frontend is a "cineprime" web applications's  frontend repo - A mern-group-lab project as Unit3 lab assignment. It is built in React, SASS and HTML. 
+The frontend app communicates with the back-end API RESTfully to Create, Read, Update, and Destroy resources (using either fetch or axios). The frontend is responsive and works on mobile phones, tablets, and desktops
 
 Squad-Lead: Alex Merced
 
@@ -28,7 +28,7 @@ Tha cineprime project is a "Movie Planner" web application which supports visito
 
 We got inspired from the following sites and projects - 
 
-* [Movie Flex App](https://movieflex-28ba7.web.app/) - for baneer and carousel 
+* [Clever Programmer youtube Netflix Clone](https://www.youtube.com/watch?v=XtMThy8QKqU&has_verified=1) and [Movie-Flex](https://movieflex-28ba7.web.app/) - for baneer and carousel 
 * [Good Reads Website](https://www.goodreads.com/) - For Wishlist CRUD Functionality
 * [Sampreet's bibiophile website](https://bibliophile.netlify.app/) - For initial wishlist inspiration
 
@@ -56,7 +56,7 @@ We got inspired from the following sites and projects -
 **Frontend**:Clear button!?   
 **Backend**:  Provides the fresh watchlist, from scratch.  
 
-
+UserStories prepared by Bojan
 
 #### Wireframes 
 
@@ -79,74 +79,72 @@ The React Architecture Diagram was built by Sampreet and formatted by Sampreet a
 | Route                  |                                   Purpose                                    |
 | ---------------------- | :--------------------------------------------------------------------------: |
 | Always                 |                      Navigation Bar and Footer                               |
-| /signin                |                      Sign up or sign in page                                 |
+| /                      |                      Sign up or sign in page                                 |
 | /                      |                     Banner and Movies listing                                |
-| /list/:id              |                    Detailed movie information for the selected movie         |
+| /                      |                    Detailed movie information for the selected movie         |
+| /                      |             Add movie to the watchlist for loggedin user                     |
 | /watchlist             |              Current user's watchlist content (For Logged-in USer Only)      |
-| /watchlist/add         |             Add movie to the watchlist for loggedin user                     |
-| /watchlist/watched     |                         List of movies user has seen from his watchlist      |
-| /watchlist/wantToWatch |             Movie list in the watchlist which the logged-in is yet to watch  |
-| /watchlist/edit        |                       Edit the movies in the watchlist                       |
-| /watchlist/editOrder   | Order/Chnage Priority of the movies in the watchlist for not yet watched movies  |
-| /watchlist/delete      |                        Delete movies from watchlist                          |
+| /watchlist             |                         List of movies user has seen from his watchlist      |
+| /watchlist             |             Movie list in the watchlist which the logged-in is yet to watch  |
+| /watchlist             |                       Edit the movies in the watchlist                       |
+| /watchlist             |                        Delete movies from watchlist                          |
 | /team                  |                       Project team information                               |
-
-
-#### Components
+| /                      |                       Logout of the site                                     |
 
 
 
 ## Time-Priority Matrix, MVPs and Post MVPs
-
-#### Time-Priority Matrix
-
-
 
 #### MVPs 
 
 A team collaborative effort on time estimation, created using [https://stackedit.io/](https://stackedit.io/)
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Repos setup with initial Boilerplate code | H | 2hrs | hrs | hrs |
-| Preparation and Planning | H | 8hrs | 8hrs | 8hrs |
+| Repos setup with initial Boilerplate code | H | 2hrs | 2hrs | 2hrs |
+| Preparation and Planning | H | 8hrs | 16hrs | 12hrs |
 | Documentation | H | 12hrs | 16hrs | 12hrs |
-| Server and Connections | H | 2hrs | hrs | hrs |
-| Schemas | H | 1hr | hrs | hrs |
-| Controllers | H | 4hr | hrs | hrs |
-| Backend deployment | H | 1hrs | hrs | hrs |
-| React components setup | H | 1hrs | hrs | hrs |
-| Navbar and Footer | H | 2hrs | hrs | hrs |
-| Banner| M | 1hrs | hrs | hrs |
-| Movie Carosel - Each Genre| M | 6hrs | hrs | hrs |
-| Team page| M | 3hrs | hrs | hrs |
-| Switch, Routes and Links | H | 3hrs | hrs | hrs |
-| Watchlist config (addition)| H | 4hrs | hrs | hrs |
-| Watchlist filter| H | 4hrs | hrs | hrs |
-| Watchlist updates| H | 12hrs | hrs | hrs |
-| Movie Details| H | 3hrs | hrs | hrs |
-| Signup/Sign in | H | 12hrs | hrs | hrs |
-| Responsiveness | H | 12hrs | hrs | hrs |
-| Extra Styling | L | 3hrs | hrs | hrs |
-| **Total** | H | **96hrs**| hrs | hrs |
+| Server and Connections | H | 2hrs | 2hrs | 2hrs |
+| Schemas | H | 1hr | 2hrs | 1.5hrs |
+| Controllers | H | 3hr | 4hrs | 4hrs |
+| Backend deployment | H | 1hrs | 0.5hrs | 0.5hrs |
+| React components setup | H | 1hrs | 1hrs | 1hrs |
+| Navbar and Footer | H | 2hrs | 5hrs | 5hrs |
+| Banner| M | 1hrs | 2hrs | 2hrs |
+| Movie Carosel - Each Genre| M | 6hrs | 12hrs | 10hrs |
+| Team page| M | 3hrs | 4hrs | 3hrs |
+| Switch, Routes and Links | H | 3hrs | 2hrs | 2hrs |
+| Watchlist config (addition)| H | 4hrs | 4hrs |4hrs |
+| Watchlist filter| H | 4hrs | 4hrs | 4hrs |
+| Watchlist updates| H | 12hrs | 15hrs | 10hrs |
+| Movie Details| H | 3hrs | 5hrs | 3hrs |
+| Signup/Sign in | H | 12hrs | 12hrs | 11hrs |
+| Responsiveness | H | 12hrs | 10hrs | 10hrs |
+| Extra Styling | L | 2hrs | 3hrs | 3hrs |
+| Gihthum Merging | L | 6hrs | 10hrs | 10hrs |
+| **Total** | H | **100hrs**| 117.5hrs | 111hrs |
 
 #### Post MVPs
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Sorting the watchlist by different fields | M |  8hrs | hrs | hrs |   
-| D3 Banner | M |  5hrs | hrs | hrs |  
-| Add your rating to the movie | M |  8hrs | hrs | hrs |  
-| Dark and Light Themes | M |  8hrs | hrs | hrs |  
-| Clear the complete Watchlist | H |  3hrs | hrs | hrs |  
-| **Total** | H | **32hrs**| hrs | hrs |
+| ~~Sorting the watchlist by different fields~~ | M |  8hrs | hrs | hrs |   
+| ~~D3 Banne~~ | M |  5hrs | hrs | hrs |  
+| ~~Add your rating to the movie~~ | M |  8hrs | hrs | hrs |  
+| ~~Dark and Light Themes~~ | M |  8hrs | hrs | hrs |  
+| Clear the complete Watchlist | H |  3hrs | 3hrs | 3hrs |  
+| **Total** | H | **32hrs**| 3hrs | 3hrs |
 
 
 ### Additional Libraries
-- Bootstrap
-- Axios
-- React, react-router-dom
+- React
+- Reactstrap Card, React Bootstrap Modal and React-Icons, 
+- Axios, Fetch
 - Node
 - Express
+- Mongoose
+- MongoDB
+- JSONWebToken (JWT) and BCRYPT 
+
 
 ### Frontend Code Snippets
 
