@@ -48,6 +48,8 @@ function LoginForm(props) {
 						'form-message'
 					).innerHTML = `User ${formData.username} successfully signed up, Please sign-in now. `;
 					document.getElementById('form-error-message').innerHTML = '';
+					event.target.hidden = true;
+					//setFormData(emptyFormData);
 				} else {
 					document.getElementById(
 						'form-error-message'
@@ -63,7 +65,6 @@ function LoginForm(props) {
 				'form-error-message'
 			).innerHTML = `Error: ${err.message}`;
 		}
-		//setFormData(emptyFormData);
 	};
 
 	const handleSignIn = async (event) => {
@@ -94,6 +95,9 @@ function LoginForm(props) {
 					).innerHTML = `User ${formData.username} successfully signed in`;
 					appCtx.saveLoginInfo(formData.username, token);
 					document.getElementById('form-error-message').innerHTML = '';
+					event.target.hidden = true;
+					document.getElementById('signup-btn').hidden = true;
+					//setFormData(emptyFormData);
 				} else {
 					document.getElementById(
 						'form-error-message'
@@ -158,6 +162,7 @@ function LoginForm(props) {
 						<div className='form-group'>
 							<button
 								onClick={handleSignUp}
+								id='signup-btn'
 								style={{ backgroundColor: '#22252a', color: 'white' }}>
 								Sign Up
 							</button>

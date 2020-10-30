@@ -27,8 +27,6 @@ function Row({ title, fetchUrl }) {
 		fetchData();
 	}, [fetchUrl]);
 
-	console.log(movies);
-
 	const opts = {
 		height: '390',
 		width: '100%',
@@ -53,25 +51,27 @@ function Row({ title, fetchUrl }) {
 		setSelectedMovie(movie);
 	};
 
-	const handleAddMovie = async (event, movieId) => {
+	const handleAddMovie = async (event, movie) => {
 		if (appCtx.user) {
 			try {
-				console.log(`Adding movie to ${appCtx.user}`, movieId);
+				console.log(`Adding movie to ${appCtx.user}`, JSON.stringify(movie));
 				const data = await axios({
 					method: 'post',
-					url: `${backendURL}/user/${appCtx.user}/${movieId}`,
+					url: `${backendURL}/user/${appCtx.user}/${movie.id}`,
 					headers: {
 						Authorization: `bearer ${appCtx.token}`,
+						'Content-Type': 'application/json',
 					},
+					data: JSON.stringify(movie),
 				});
 				console.log(
-					`Add movie ${movieId} to user ${appCtx.user} response`,
+					`Add movie ${movie.id} to user ${appCtx.user} response`,
 					data.data
 				);
 				event.target.innerHTML = 'Added to Watchlist';
 			} catch (err) {
 				console.log(
-					`Error adding movie ${movieId} to user ${appCtx.user}`,
+					`Error adding movie ${movie.id} to user ${appCtx.user}`,
 					err.message
 				);
 			}
@@ -84,6 +84,7 @@ function Row({ title, fetchUrl }) {
 		event.preventDefault();
 		console.log('In handleCloseAddMovie()');
 		setSelectedMovie({});
+		document.getElementById('addMovie').innerHTML = 'Add to Watchlist';
 	};
 
 	let selectedMovieJSX = <></>;
@@ -117,14 +118,19 @@ function Row({ title, fetchUrl }) {
 							</h5>
 							<br />
 							<h5 className='jsxOverview'>{movie.overview}</h5>
+							<p
+								className='jsxTitle'
+								style={{ color: 'lightgreen' }}
+								id='movie-message'></p>
 						</div>
 						<br />
 					</CardBody>
 					<Button
 						id='addMovie'
-						onClick={(event) => handleAddMovie(event, movie.id)}>
+						onClick={(event) => handleAddMovie(event, movie)}>
 						Add to Watchlist
 					</Button>
+					<input type='hidden' value={movie.id} />
 					{trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
 				</Card>
 			</div>
