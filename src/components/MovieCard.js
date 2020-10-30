@@ -95,7 +95,7 @@ const MovieCard = (props) => {
 				<CardBody>
 					<CardTitle>Movie Title:{movie.title}</CardTitle>
 					<CardTitle>Release Date:{movie.releaseDate}</CardTitle>
-					<CardTitle>Runtime:{movie.runtime}mins </CardTitle>
+					{/* <CardTitle>Runtime:{movie.runtime}mins </CardTitle> */}
 					<CardTitle>Date Added:{movie.dateAdded}</CardTitle>
 					{watchJSX}
 					<Button id='remove' onClick={handleDelete}>
