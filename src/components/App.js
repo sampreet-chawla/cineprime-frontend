@@ -120,12 +120,12 @@ function LoginForm(props) {
 	return (
 		<Modal
 			{...props}
-			size='lg'
+			size='sm'
 			aria-labelledby='contained-modal-title-vcenter'
 			centered>
 			<Modal.Header closeButton>
 				<Modal.Title id='contained-modal-title-vcenter'>
-					Please Sign Up / Sign In... and enjoy!
+					Sign Up / In, & Enjoy!
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
