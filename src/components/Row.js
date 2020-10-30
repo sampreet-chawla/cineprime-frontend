@@ -3,12 +3,11 @@ import axios from './Axios';
 import './Row.css';
 import YouTube from 'react-youtube';
 import movieTrailer from 'movie-trailer';
-import { Card, CardImg, CardBody, CardTitle, Button } from 'reactstrap';
+import { Card, CardImg, CardBody, Button } from 'reactstrap';
 import { appContext } from './App.js';
 import { BACKEND_API_URL } from './Info.js';
 
 const base_Url = 'https://image.tmdb.org/t/p/original/';
-//const backendURL = 'http://localhost:4501/api/movies';
 const backendURL = `${BACKEND_API_URL}/api/movies`;
 
 function Row({ title, fetchUrl }) {

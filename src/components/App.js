@@ -17,14 +17,22 @@ function LoginForm(props) {
 	const backendURL = BACKEND_API_URL;
 	const appCtx = React.useContext(appContext);
 
-	const [formData, setFormData] = React.useState({
+	const emptyFormData = {
 		username: '',
 		password: '',
-	});
+	};
+
+	const [formData, setFormData] = React.useState(emptyFormData);
 
 	const handleSignUp = async (event) => {
 		event.preventDefault();
 		console.log('Inside handleSignUp : ', JSON.stringify(formData));
+
+		if (formData.username === '' || formData.password === '') {
+			document.getElementById(
+				'form-error-message'
+			).innerHTML = `Username and/or password is required.`;
+		}
 		try {
 			const data = await axios({
 				method: 'post',
@@ -34,33 +42,39 @@ function LoginForm(props) {
 				},
 				data: JSON.stringify(formData),
 			});
-			console.log(`Sign-up User response: `, data.data.data);
 			if (data.data.data) {
 				if (!data.data.error) {
 					document.getElementById(
 						'form-message'
 					).innerHTML = `User ${formData.username} successfully signed up, Please sign-in now. `;
+					document.getElementById('form-error-message').innerHTML = '';
 				} else {
 					document.getElementById(
-						'form-message'
+						'form-error-message'
 					).innerHTML = `Error: ${data.data.error}`;
 				}
 			} else {
 				document.getElementById(
-					'form-message'
+					'form-error-message'
 				).innerHTML = `${data.data.error}`;
 			}
 		} catch (err) {
-			console.log(`Error Signing up: ${err.message}`);
 			document.getElementById(
-				'form-message'
+				'form-error-message'
 			).innerHTML = `Error: ${err.message}`;
 		}
+		//setFormData(emptyFormData);
 	};
 
 	const handleSignIn = async (event) => {
 		event.preventDefault();
 		console.log('Inside handleSignIn : ', JSON.stringify(formData));
+		if (formData.username === '' || formData.password === '') {
+			document.getElementById(
+				'form-error-message'
+			).innerHTML = `Username and/or password is required.`;
+		}
+
 		try {
 			const data = await axios({
 				method: 'post',
@@ -79,22 +93,24 @@ function LoginForm(props) {
 						'form-message'
 					).innerHTML = `User ${formData.username} successfully signed in`;
 					appCtx.saveLoginInfo(formData.username, token);
+					document.getElementById('form-error-message').innerHTML = '';
 				} else {
 					document.getElementById(
-						'form-message'
+						'form-error-message'
 					).innerHTML = `Error: ${data.data.error}`;
 				}
 			} else {
 				document.getElementById(
-					'form-message'
+					'form-error-message'
 				).innerHTML = `${data.data.error}`;
 			}
 		} catch (err) {
 			console.log(`Error Signing up: ${err.message}`);
 			document.getElementById(
-				'form-message'
+				'form-error-message'
 			).innerHTML = `Error: ${err.message}`;
 		}
+		//setFormData(emptyFormData);
 	};
 
 	const handleOnChange = (event) => {
@@ -109,16 +125,19 @@ function LoginForm(props) {
 			centered>
 			<Modal.Header closeButton>
 				<Modal.Title id='contained-modal-title-vcenter'>
-					Welcome to CinePrime, Please Sign Up / Sign In
+					Please Sign Up / Sign In... and enjoy!
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
 				<div>
 					<div className='form-group'>
-						<p id='form-message'></p>
+						<p id='form-message' style={{ color: 'green' }}></p>
 					</div>
 					<div className='form-group'>
-						<label htmlFor='username'>Username</label>
+						<p id='form-error-message' style={{ color: 'red' }}></p>
+					</div>
+					<div className='form-group'>
+						<label htmlFor='username'>Username</label>&nbsp;&nbsp;
 						<input
 							type='text'
 							placeholder='Username'
@@ -127,7 +146,7 @@ function LoginForm(props) {
 						/>
 					</div>
 					<div className='form-group'>
-						<label htmlFor='password'>Password</label>
+						<label htmlFor='password'>Password</label>&nbsp;&nbsp;
 						<input
 							type='password'
 							placeholder='Password'
@@ -135,16 +154,30 @@ function LoginForm(props) {
 							onChange={handleOnChange}
 						/>
 					</div>
-					<div className='form-group'>
-						<button onClick={handleSignUp}>Sign Up</button>
-					</div>
-					<div className='form-group'>
-						<button onClick={handleSignIn}>Sign In</button>
+					<div id='form-button-group'>
+						<div className='form-group'>
+							<button
+								onClick={handleSignUp}
+								style={{ backgroundColor: '#22252a', color: 'white' }}>
+								Sign Up
+							</button>
+						</div>
+						<div className='form-group'>
+							<button
+								onClick={handleSignIn}
+								style={{ backgroundColor: '#22252a', color: 'white' }}>
+								Sign In
+							</button>
+						</div>
 					</div>
 				</div>
 			</Modal.Body>
 			<Modal.Footer>
-				<Button onClick={props.onHide}>Close</Button>
+				<Button
+					onClick={props.onHide}
+					style={{ backgroundColor: '#22252a', color: 'white' }}>
+					Close
+				</Button>
 			</Modal.Footer>
 		</Modal>
 	);
