@@ -152,9 +152,11 @@ A team collaborative effort on time estimation, created using [https://stackedit
 
 ### Limitations
 
+1. A signed-in user will have to close the movie details section using 'X' button to exit the movie details section. After viewing or adding the movie to the watchlist, if the movie details is not closed with the 'X' button, and if the user clicks on another movie in the row, he will automatically see the movie details for the movie with previous movie details status - maybe as Added to the Watchlist. 
+
 ### Issues and Resolution
 
 ### Unresolved Issues
 
-
+1. DatePicker is unable to reflect the change in state within the MovieCard. When a MovieCard is removed, its Movie Card dates get passed on to the subsequent movie card. For now, we can update the plan date for any movie cards in the watch list, and would suggest to update the watched Date of the last movie card only. 
 
