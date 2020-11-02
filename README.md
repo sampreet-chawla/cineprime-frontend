@@ -148,6 +148,14 @@ A team collaborative effort on time estimation, created using [https://stackedit
 
 ### Frontend Code Snippets
 
+[Smart way of tuncating long strings](https://stackoverflow.com/questions/1199352/smart-way-to-truncate-long-strings)
+
+```
+function truncate(str, n) {
+		return str?.length > n ? str.substr(0, n - 1) + '...' : str;
+	}
+```
+
 ### Challenges
 
 ### Limitations
