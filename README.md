@@ -148,7 +148,7 @@ A team collaborative effort on time estimation, created using [https://stackedit
 
 ### Frontend Code Snippets
 
-[Smart way of tuncating long strings](https://stackoverflow.com/questions/1199352/smart-way-to-truncate-long-strings)
+[Smart way of truncating long strings](https://stackoverflow.com/questions/1199352/smart-way-to-truncate-long-strings)
 
 ```
 function truncate(str, n) {
