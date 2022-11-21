@@ -4,7 +4,7 @@ import './Footer.css';
 function Footer() {
 	return (
 		<footer>
-			<p>© Copyright SEIR-831 GA Group Project -2020-</p>
+			<p>© Copyright SEIR-831 GA Group Project -{new Date().getUTCFullYear()}-</p>
 		</footer>
 	);
 }
